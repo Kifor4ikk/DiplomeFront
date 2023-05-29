@@ -1,0 +1,120 @@
+<H1>Mid security</H1>
+<div class="work-flow-low">
+  <div class="abonent-container">
+    <button
+      tuiButton
+      type="button"
+      (click)="abonentExpandToggle()">
+      Abonent
+    </button>
+    <!--Abonent -->
+    <tui-expand [expanded]="abonentExpanded">
+      <ng-template tuiExpandContent>
+        <!--Create -->
+        <button tuiButton type="button" (click)="abonentCreateExpandToggle()" appearance="accent">Create</button>
+        <tui-expand [expanded]="abonentCreateExpanded">
+          <ng-template tuiExpandContent>
+            <form
+              class="b-form"
+              [formGroup]="abonentCreateForm">
+              <tui-input formControlName="login">login<input tuiTextfield/></tui-input>
+              <tui-input formControlName="password">password<input tuiTextfield/></tui-input>
+              <tui-input formControlName="firstName">firstName<input tuiTextfield/></tui-input>
+              <tui-input formControlName="secondName">secondName<input tuiTextfield/></tui-input>
+              <tui-input formControlName="thirdName">thirdName<input tuiTextfield/></tui-input>
+              <tui-input formControlName="phoneNumber">phoneNumber<input tuiTextfield/></tui-input>
+              <tui-input formControlName="age">age<input tuiTextfield/></tui-input>
+              <tui-input formControlName="note">note<input tuiTextfield/></tui-input>
+            </form>
+            <button tuiButton (click)="abonentCreate()" appearance="primary">Execute</button>
+          </ng-template>
+        </tui-expand>
+
+        <!--Get-->
+        <button tuiButton type="button" (click)="abonentGetExpandToggle()" appearance="secondary">Get</button>
+        <tui-expand [expanded]="abonentGetExpanded">
+          <ng-template tuiExpandContent>
+            <form
+              class="b-form"
+              [formGroup]="abonentGetForm">
+              <tui-input formControlName="id">id<input tuiTextfield/></tui-input>
+            </form>
+            <button tuiButton (click)="abonentGet()" appearance="primary">Execute</button>
+          </ng-template>
+        </tui-expand>
+
+
+        <!--Update-->
+        <button tuiButton type="button" (click)="abonentUpdateExpandToggle()" appearance="secondary">Update</button>
+        <tui-expand [expanded]="abonentUpdateExpanded">
+          <ng-template tuiExpandContent>
+            <form
+              class="b-form"
+              [formGroup]="abonentUpdateForm">
+              <tui-input formControlName="id">id<input tuiTextfield/></tui-input>
+              <tui-input formControlName="password">password<input tuiTextfield/></tui-input>
+              <tui-input formControlName="firstName">firstName<input tuiTextfield/></tui-input>
+              <tui-input formControlName="secondName">secondName<input tuiTextfield/></tui-input>
+              <tui-input formControlName="thirdName">thirdName<input tuiTextfield/></tui-input>
+              <tui-input formControlName="phoneNumber">phoneNumber<input tuiTextfield/></tui-input>
+              <tui-input formControlName="age">age<input tuiTextfield/></tui-input>
+              <tui-input formControlName="note">note<input tuiTextfield/></tui-input>
+            </form>
+            <button tuiButton (click)="abonentUpdate()" appearance="primary">Execute</button>
+          </ng-template>
+        </tui-expand>
+
+      </ng-template>
+    </tui-expand>
+
+  </div>
+
+  <div class="card-container">
+    <button
+      tuiButton
+      type="button"
+      (click)="cardExpandToggle()">
+      Card
+    </button>
+    <!--Abonent -->
+    <tui-expand [expanded]="cardExpanded">
+      <ng-template tuiExpandContent>
+        <!--Create -->
+        <button tuiButton type="button" (click)="cardCreateExpandToggle()" appearance="accent">Create</button>
+        <tui-expand [expanded]="cardCreateExpanded">
+          <ng-template tuiExpandContent>
+            <form
+              class="b-form"
+              [formGroup]="cardCreateForm">
+              <tui-input formControlName="login">login<input tuiTextfield/></tui-input>
+              <tui-input formControlName="password">password<input tuiTextfield/></tui-input>
+              <tui-input formControlName="firstName">firstName<input tuiTextfield/></tui-input>
+              <tui-input formControlName="secondName">secondName<input tuiTextfield/></tui-input>
+              <tui-input formControlName="thirdName">thirdName<input tuiTextfield/></tui-input>
+              <tui-input formControlName="phoneNumber">phoneNumber<input tuiTextfield/></tui-input>
+              <tui-input formControlName="age">age<input tuiTextfield/></tui-input>
+              <tui-input formControlName="note">note<input tuiTextfield/></tui-input>
+            </form>
+            <button tuiButton (click)="cardCreate()" appearance="primary">Execute</button>
+          </ng-template>
+        </tui-expand>
+
+        <!--Get-->
+        <button tuiButton type="button" (click)="cardGetExpandToggle()" appearance="secondary">Get</button>
+        <tui-expand [expanded]="cardGetExpanded">
+          <ng-template tuiExpandContent>
+            <form
+              class="b-form"
+              [formGroup]="cardGetForm">
+              <tui-input formControlName="id">id<input tuiTextfield/></tui-input>
+            </form>
+            <button tuiButton (click)="cardGet()" appearance="primary">Execute</button>
+          </ng-template>
+        </tui-expand>
+
+
+      </ng-template>
+    </tui-expand>
+  </div>
+
+</div>

@@ -1,0 +1,49 @@
+<div class="account-container">
+
+  <button
+    tuiButton
+    type="button"
+    (click)="expandedToggle()">
+    Account
+  </button>
+
+  <tui-expand [expanded]="expanded">
+    <ng-template tuiExpandContent>
+
+      <!-- Create -->
+      <button tuiButton type="button" (click)="createExpandedToggle()" appearance="accent">Create</button>
+      <tui-expand [expanded]="createExpanded">
+        <ng-template tuiExpandContent>
+
+          <form
+            class="b-form"
+            [formGroup]="accountCreateForm">
+            <tui-input formControlName="abonentId">Abonent id<input tuiTextfield/></tui-input>
+            <tui-input formControlName="currencyCode">Currency Code<input tuiTextfield/></tui-input>
+          </form>
+
+          <button tuiButton type="button" (click)="createAccount()" appearance="primary">Execute create!</button>
+
+        </ng-template>
+      </tui-expand>
+
+      <!-- Get -->
+      <button tuiButton type="button" (click)="getExpandedToggle()" appearance="secondary">Get</button>
+      <tui-expand [expanded]="getExpanded">
+        <ng-template tuiExpandContent>
+
+          <form
+            class="b-form"
+            [formGroup]="accountGetForm">
+            <tui-input formControlName="abonentId">Account id<input tuiTextfield/></tui-input>
+          </form>
+          <button tuiButton type="button" (click)="getAccount()" appearance="primary">Execute Get!</button>
+
+        </ng-template>
+      </tui-expand>
+
+
+    </ng-template>
+  </tui-expand>
+
+</div>

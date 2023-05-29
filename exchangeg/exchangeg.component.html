@@ -1,0 +1,29 @@
+<div class="exchange-container">
+
+    <!--Exchange-->
+  <!-- GET -->
+  <button
+    tuiButton
+    type="button"
+    (click)="exchangeGetExpand()">
+    Exchange
+  </button>
+
+  <tui-expand [expanded]="exchangeGetExpanded">
+    <ng-template tuiExpandContent>
+      <form
+        class="b-form"
+        [formGroup]="getExchangeCode"
+      >
+        <tui-input formControlName="exchangeCodeGet">
+          Code
+          <input tuiTextfield/>
+        </tui-input>
+
+        <button tuiButton (click)="getExchange()">Execute</button>
+      </form>
+
+    </ng-template>
+  </tui-expand>
+
+</div>
